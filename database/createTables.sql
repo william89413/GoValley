@@ -59,14 +59,14 @@ CREATE TABLE `submissions` (
     foreign key(`submit_id`) references submits(`id`)
 ) ENGINE = InnoDB;
 
-DROP TABLE IF EXISTS `last_result`;
-CREATE TABLE `last_result` (
-	`id` int(10) not null primary key auto_increment,
-    `submit_id` int(10) not null,
-    `user_id` int(10) not null,
-    foreign key(`submit_id`) references submits(`id`),
-    foreign key(`user_id`) references users(`id`)
-)ENGINE = InnoDB;
+-- DROP TABLE IF EXISTS `last_result`;
+-- CREATE TABLE `last_result` (
+-- 	`id` int(10) not null primary key auto_increment,
+--     `submit_id` int(10) not null,
+--     `user_id` int(10) not null,
+--     foreign key(`submit_id`) references submits(`id`),
+--     foreign key(`user_id`) references users(`id`)
+-- )ENGINE = InnoDB;
 
 
 DROP TABLE IF EXISTS `last_edit`;
