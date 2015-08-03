@@ -71,8 +71,10 @@ CREATE TABLE `last_result` (
 
 DROP TABLE IF EXISTS `last_edit`;
 CREATE TABLE `last_edit` (
-	`id` int(10) not null primary key auto_increment,
+    `id` int(10) not null primary key auto_increment,
     `user_id` int(10) not null,
-  	`content` varchar(1500) not null,
-    foreign key(`user_id`) references users(`id`)
+    `problem_id` int(4) not null,
+    `content` varchar(1500) not null,
+    foreign key(`user_id`) references users(`id`),
+    foreign key(`problem_id`) references problems(`id`)
 )ENGINE = InnoDB;
