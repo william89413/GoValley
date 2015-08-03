@@ -1,3 +1,9 @@
+drop database if exists govalley;
+create database govalley;
+use govalley;
+
+
+
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int(10) NOT NULL auto_increment,
