@@ -9,6 +9,7 @@ CREATE TABLE `users` (
   `id` int(10) NOT NULL auto_increment,
   `username` varchar(50) NOT NULL,
   `password` varchar(40) NOT NULL,
+  `email` varchar(50) NOT NULL,
   `salt` char(128) NOT NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE = InnoDB AUTO_INCREMENT=4;
