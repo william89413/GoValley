@@ -23,10 +23,10 @@ CREATE TABLE `problems` (
     `example` varchar(1000),
 	`tips` varchar(500),
     `annotation` varchar(500),
-    `level` char not null,
-    `category` char not null,
-    `lesson` char,
-    `plan` char not null
+    `level` varchar(10) not null,
+    `category` varchar(20) not null,
+    `lesson` varchar(20),
+    `plan` varchar(20) not null
 ) ENGINE = InnoDB;
 
 DROP TABLE IF EXISTS `test_cases`;
