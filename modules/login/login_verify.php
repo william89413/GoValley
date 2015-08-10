@@ -5,8 +5,8 @@
 <?php
 
 	$host = "localhost"; // Host name 
-	$username = ""; // Mysql username 
-	$password = ""; // Mysql password 
+	$username = "govalley2015"; // Mysql username 
+	$password = "govalley2015"; // Mysql password 
 	$db_name = "govalley"; // Database name 
 	$tbl_name = "users"; // Table name 
 	$session_username = 1; // Set value for username session
