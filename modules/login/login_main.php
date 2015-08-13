@@ -28,6 +28,7 @@
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
 						<td><input type="submit" name="Submit" value="Login"></td>
+						<td><a href='http://localhost//GoValley//modules//signup//signup_main.php'>SignUp</a></td>
 					</tr>
 
 				</table>
