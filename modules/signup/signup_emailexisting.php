@@ -9,7 +9,7 @@
                 <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
 
                     <tr>
-                        <td colspan="3"><strong>Sign Up</strong></td>
+                        <td colspan="3" bgcolor="#FF0000"><strong>*Email has existed</strong></td>
                     </tr>
 
                     <tr>
@@ -28,7 +28,7 @@
                         <td>Confirm Email</td>
                         <td>:</td>
                         <td><input name="confirmEmail" type="text" id="confirmEmail" required></td>
-                    </tr>
+                    </tr>                                   
 
                     <tr>
                         <td>Password</td>
@@ -40,13 +40,13 @@
                         <td>Confirm Password</td>
                         <td>:</td>
                         <td><input name="confirmPassword" type="password" id="confirmPassword" required></td>
-                    </tr>
+                    </tr>   
 
                     <tr>
                         <td>Major</td>
                         <td>:</td>
                         <td><input name="major" type="text" id="major" required></td>
-                    </tr>
+                    </tr>   
 
                     <tr>
                         <td>Profession</td>
@@ -58,13 +58,13 @@
                         <td>Company</td>
                         <td>:</td>
                         <td><input name="company" type="text" id="company" required></td>
-                    </tr>
+                    </tr>               
 
                     <tr>
                         <td>Where do you hear us</td>
                         <td>:</td>
                         <td>
-                            <select id="infoSource" name="infoSource" size="4">
+                            <select>
                                 <option value ="ad">advertisement</option>
                                 <option value ="friend">friends</option>
                                 <option value ="wechat">wechat</option>
@@ -77,7 +77,7 @@
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td><input type="submit" name="Submit" value="Submit"></td>
-                    </tr>
+                    </tr>                                       
 
                 </table>
             </td>

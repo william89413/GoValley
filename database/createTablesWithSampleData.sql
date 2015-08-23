@@ -166,7 +166,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `major`, `profession`, `company`, `info_source`, `salt`) VALUES
-(1, 'niu001', '123456', 'niu@test.com', 'abcdefg', 'CS', 'software engineer', 'Baidu', 'from friends');
+(1, 'niu001', '123456', 'niu@test.com', 'CS', 'software engineer', 'Baidu', 'from friends', 'abcdefg');
 
 --
 -- Indexes for dumped tables
