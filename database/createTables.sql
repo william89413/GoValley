@@ -10,6 +10,10 @@ CREATE TABLE `users` (
   `username` varchar(50) NOT NULL,
   `password` varchar(40) NOT NULL,
   `email` varchar(50) NOT NULL,
+  `major` varchar(50) NOT NULL,
+  `profession` varchar(50) NOT NULL,
+  `company` varchar(50) NOT NULL,
+  `info_source` varchar(50) NOT NULL,
   `salt` char(128) NOT NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE = InnoDB AUTO_INCREMENT=4;

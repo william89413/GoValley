@@ -7,9 +7,9 @@
 -- Server version: 5.5.42
 -- PHP Version: 5.6.7
 
-drop database if exists govalley_sampleData;
-create database govalley_sampleData;
-use govalley_sampleData;
+drop database if exists govalley;
+create database govalley;
+use govalley;
 
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -154,6 +154,10 @@ CREATE TABLE `users` (
   `username` varchar(50) NOT NULL,
   `password` varchar(40) NOT NULL,
   `email` varchar(50) NOT NULL,
+  `major` varchar(50) NOT NULL,
+  `profession` varchar(50) NOT NULL,
+  `company` varchar(50) NOT NULL,
+  `info_source` varchar(50) NOT NULL,
   `salt` char(128) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
@@ -161,8 +165,8 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`, `email`, `salt`) VALUES
-(1, 'niu001', '123456', 'niu@test.com', 'abcdefg');
+INSERT INTO `users` (`id`, `username`, `password`, `email`, `major`, `profession`, `company`, `info_source`, `salt`) VALUES
+(1, 'niu001', '123456', 'niu@test.com', 'CS', 'software engineer', 'Baidu', 'from friends', 'abcdefg');
 
 --
 -- Indexes for dumped tables
