@@ -13,15 +13,15 @@
                     </tr>
 
                     <tr>
-                        <td width="78">Username</td>
+                        <td width="78">Email</td>
                         <td width="6">:</td>
-                        <td width="294"><input name="myUsername" type="text" id="myUsername"></td>
+                        <td width="294"><input name="myEmail" type="email" id="myEmail"></td>
                     </tr>
 
                     <tr>
                         <td>Password</td>
                         <td>:</td>
-                        <td><input name="myPassword" type="text" id="myPassword"></td>
+                        <td><input name="myPassword" type="password" id="myPassword"></td>
                     </tr>
 
                     <tr>

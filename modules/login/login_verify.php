@@ -17,28 +17,28 @@
     $db = mysql_select_db("$db_name", $link) or die ("cannot select DB");
 
     // username and password sent from form
-    $myUsername = $_POST['myUsername'];
+    $myEmail = $_POST['myEmail'];
     $myPassword = $_POST['myPassword'];
 
     // To protect MySQL injection (more detail about MySQL injection)
-    $myUsername = stripslashes($myUsername);
+    $myEmail = stripslashes($myEmail);
     $myPassword = stripslashes($myPassword);
-    $myUsername = mysql_real_escape_string($myUsername);
+    $myEmail = mysql_real_escape_string($myEmail);
     $myPassword = mysql_real_escape_string($myPassword);
-    $sql = "SELECT * FROM $tbl_name WHERE username='$myUsername' and password='$myPassword'";
+    $sql = "SELECT * FROM $tbl_name WHERE email='$myEmail' and password='$myPassword'";
     $result = mysql_query($sql);
 
     // Mysql_num_row is counting table row
     $count = mysql_num_rows($result);
 
-    // If result matched $myUsername and $myPassword, table row must be 1 row
+    // If result matched $myEmail and $myPassword, table row must be 1 row
     if($count == 1)
     {
-        // Register $myUsername, $myPassword and redirect to file "login_success.php"
+        // Register $myEmail, $myPassword and redirect to file "problems_layout.php"
         session_start();
-        $_SESSION["myUsername"] = $session_username;
+        $_SESSION["myEmail"] = $session_username;
         $_SESSION["myPassword"] = $session_password;
-        header("Location: login_success.php");
+        header("Location: /GoValley//modules//problems//problems_layout.php");
     }
 
     else

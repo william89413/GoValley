@@ -64,7 +64,7 @@
                         <td>Where do you hear us</td>
                         <td>:</td>
                         <td>
-                            <select>
+                            <select id="infoSource" name="infoSource" size="4">
                                 <option value ="ad">advertisement</option>
                                 <option value ="friend">friends</option>
                                 <option value ="wechat">wechat</option>

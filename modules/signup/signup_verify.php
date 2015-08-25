@@ -25,6 +25,9 @@
     $myCompany = $_POST['company'];
     $infoSource = $_POST['infoSource'];
 
+    // Email Verification Params
+    $emailVerEnabled = false;
+
     // Validate email
     $query = "select email from users where email = '$myEmail'";
     $link = mysql_query($query);
@@ -40,17 +43,20 @@
     {
         //email already taken
         header("Location: signup_emailexisting.php");
+        exit(0);
     }
     
     // Match email and password with confirmed ones
     if ($myEmail != $myConfirmEmail)
     {
         header("Location: signup_emailwarning.php");
+        exit(0);
     }
 
     if ($myPassword != $myConfirmPw)
     {
         header("Location: signup_passwordwarning.php");
+        exit(0);
     }
 
     // Insert data to database
@@ -64,26 +70,35 @@
         die('can not access db to insert data');
     }
     
-    // Email verification proc
-    include '..//emailverification//smtp_config.php';
 
-    // Create link url
-    $url = 'http://www.govalley.com/';
-    $activation = md5($myEmail.time()); // encrypted email+timestamp
-    $fromAddr = "kobe06410@gmail.com";
-    $emailSubject = "govalley email verification";
-    $emailBody = 'Hi, <br/> <br/> Thank you for being our valuable members. 
-                 Please verify your email and get started using your GoValley account. 
-                 <br/> <br/> <a href="'.$url.'email_activation/'.$activation.'">'.$url.'activation/'.$activation.'</a>';
-
-    if (smtpmailer($myEmail, $fromAddr, $fromAddr, $emailSubject, $emailBody))
+    if ($emailVerEnabled)
     {
-        echo "Verification email was sent successfully";
+        // Email verification proc
+        include '..//emailverification//smtp_config.php';
+
+        // Create link url
+        $url = 'http://www.govalley.com/';
+        $activation = md5($myEmail.time()); // encrypted email+timestamp
+        $fromAddr = "kobe06410@gmail.com";
+        $emailSubject = "govalley email verification";
+        $emailBody = 'Hi, <br/> <br/> Thank you for being our valuable members. 
+                     Please verify your email and get started using your GoValley account. 
+                     <br/> <br/> <a href="'.$url.'email_activation/'.$activation.'">'.$url.'activation/'.$activation.'</a>';
+
+        if (smtpmailer($myEmail, $fromAddr, $fromAddr, $emailSubject, $emailBody))
+        {
+            echo "Verification email was sent successfully";
+        }
+
+        else
+        {
+            echo "Verification email was not able to be sent";
+        }
     }
 
     else
     {
-        echo "Verification email was not able to be sent";
+        echo "Succeed signing up!";
     }
 
 ?>
