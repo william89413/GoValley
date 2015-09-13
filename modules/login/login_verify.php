@@ -20,7 +20,7 @@
     $myEmail = $_POST['myEmail'];
     $myPassword = $_POST['myPassword'];
 
-    // To protect MySQL injection (more detail about MySQL injection)
+    // To protect MySQL injection
     $myEmail = stripslashes($myEmail);
     $myPassword = stripslashes($myPassword);
     $myEmail = mysql_real_escape_string($myEmail);

@@ -48,7 +48,7 @@ INSERT INTO `last_edit` (`id`, `user_id`, `problem_id`, `content`) VALUES
 CREATE TABLE `problems` (
   `id` int(4) NOT NULL,
   `name` varchar(50) NOT NULL,
-  `discription` varchar(1000) NOT NULL,
+  `description` varchar(1000) NOT NULL,
   `assumption` varchar(1000) DEFAULT NULL,
   `example` varchar(1000) DEFAULT NULL,
   `tips` varchar(500) DEFAULT NULL,
@@ -63,7 +63,7 @@ CREATE TABLE `problems` (
 -- Dumping data for table `problems`
 --
 
-INSERT INTO `problems` (`id`, `name`, `discription`, `assumption`, `example`, `tips`, `annotation`, `level`, `category`, `lesson`, `plan`) VALUES
+INSERT INTO `problems` (`id`, `name`, `description`, `assumption`, `example`, `tips`, `annotation`, `level`, `category`, `lesson`, `plan`) VALUES
 (1, 'Selection Sort', 'Given an array of integers, sort the elements in the array in ascending order. The selection sort algorithm should be used to solve this problem.', NULL, NULL, NULL, NULL, 'easy', 'Data Structure', NULL, 'class'),
 (2, 'Merge Sort', 'Given an array of integers, sort the elements in the array in ascending order. The merge sort algorithm should be used to solve this problem.', NULL, NULL, NULL, NULL, 'easy', 'Data Structure', NULL, 'class'),
 (3, 'Quick Sort', 'Given an array of integers, sort the elements in the array in ascending order. The quick sort algorithm should be used to solve this problem.', NULL, NULL, NULL, NULL, 'easy', 'Data Structure', NULL, 'class');

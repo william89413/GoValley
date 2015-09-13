@@ -4,7 +4,7 @@
 
 <?php
 
-    echo "Successfully Match the Current Username"
+    echo "Successfully Match the Current Username";
 
 ?>
 
